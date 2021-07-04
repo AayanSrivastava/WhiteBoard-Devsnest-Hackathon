@@ -25,7 +25,6 @@ body {
 
 .rest {
   display: flex;
-  justify-content: flex-end;
 }
 
 .rest .color-field {
@@ -49,7 +48,6 @@ body {
   cursor: pointer;
   color: white;
   background-color: rgba(0, 0, 0, 0.671);
-  font-weight: bold;
   margin: 5px 10px;
 }
 
@@ -101,4 +99,17 @@ canvas {
   background-color: white;
   border: 10px solid transparent;
   border-image: url("border.jpg") 60 stretch;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .tools {
+    display: block;
+  }
+}
+
+@media (max-width: 750px) {
+  .rest .button {
+    margin: 5px 2px;
+  }
 }
