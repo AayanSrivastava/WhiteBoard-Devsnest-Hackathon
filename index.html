@@ -20,12 +20,16 @@
       <div class="tools">
         <div class="heading">Titans Whiteboard</div>
         <div class="rest">
-
-        <div class="tooltip">
-          <input class="button" onclick="changecolor()" type="color" onchange="changecolor(this)">
-          <!-- bucket icon -->
-          <span class="tooltiptext">Bucket</span>
-        </div>
+          <div class="tooltip">
+            <input
+              class="button"
+              onclick="changecolor()"
+              type="color"
+              onchange="changecolor(this)"
+            />
+            <!-- bucket icon -->
+            <span class="tooltiptext">Background Color</span>
+          </div>
 
           <div class="tooltip">
             <button id="pencil" class="button">
@@ -33,6 +37,14 @@
             </button>
             <span class="tooltiptext">Pencil</span>
           </div>
+
+          <div class="tooltip">
+            <button id="line" class="button">
+              <i class="fas fa-grip-lines"></i>
+            </button>
+            <span class="tooltiptext">Line</span>
+          </div>
+
           <input
             oninput="draw_width = this.value"
             type="range"
@@ -40,12 +52,7 @@
             max="100"
             class="pen-range"
           />
-          <div class="tooltip">
-            <button id="line" class="button">
-              <i class="fas fa-grip-lines"></i>
-            </button>
-            <span class="tooltiptext">Line</span>
-          </div>
+
           <div class="tooltip">
             <button onclick="undoLast()" type="button" class="button">
               <i class="fas fa-undo"></i>
