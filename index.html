@@ -33,6 +33,13 @@
             </button>
             <span class="tooltiptext">Pencil</span>
           </div>
+          <input
+            oninput="draw_width = this.value"
+            type="range"
+            min="1"
+            max="100"
+            class="pen-range"
+          />
           <div class="tooltip">
             <button id="line" class="button">
               <i class="fas fa-grip-lines"></i>
@@ -77,13 +84,6 @@
             oninput="draw_color = this.value"
             type="color"
             class="color-picker"
-          />
-          <input
-            oninput="draw_width = this.value"
-            type="range"
-            min="1"
-            max="100"
-            class="pen-range"
           />
         </div>
       </div>
