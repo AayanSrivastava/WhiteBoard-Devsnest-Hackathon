@@ -1,8 +1,19 @@
 body {
   margin: 0px;
-  padding: 30px;
+  padding: 20px 30px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.705);
+  background: #512da8;
+}
+
+#info {
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  background: rebeccapurple;
+  color: white;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .tools {

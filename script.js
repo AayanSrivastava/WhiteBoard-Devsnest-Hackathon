@@ -20,11 +20,9 @@ function change_color(ele) {
   draw_color = ele.style.background;
 }
 
-setTimeout(() => {
-  alert("Click on Pencil or Line to draw");
-}, 2000);
-
 document.getElementById("pencil").addEventListener("click", () => {
+  document.getElementById("info").style.display = "none";
+
   canvas.removeEventListener("mousedown", str, false);
   canvas.removeEventListener("mouseup", end, false);
 
@@ -44,6 +42,8 @@ document.getElementById("pencil").addEventListener("click", () => {
 });
 
 document.getElementById("line").addEventListener("click", () => {
+  document.getElementById("info").style.display = "none";
+
   canvas.removeEventListener("touchstart", start, false);
   canvas.removeEventListener("touchmove", draw, false);
   canvas.removeEventListener("mousedown", start, false);
@@ -144,7 +144,6 @@ const undoLast = () => {
   }
 };
 
-function changecolor(self){
-  document.getElementById('canvas').style.background = self.value;
+function changecolor(self) {
+  document.getElementById("canvas").style.background = self.value;
 }
-
