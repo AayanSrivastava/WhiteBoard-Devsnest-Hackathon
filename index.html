@@ -21,17 +21,6 @@
         <div class="heading">Titans Whiteboard</div>
         <div class="rest">
           <div class="tooltip">
-            <input
-              class="button"
-              onclick="changecolor()"
-              type="color"
-              onchange="changecolor(this)"
-            />
-            <!-- bucket icon -->
-            <span class="tooltiptext">Background Color</span>
-          </div>
-
-          <div class="tooltip">
             <button id="pencil" class="button">
               <i class="fas fa-pencil-alt"></i>
             </button>
@@ -40,7 +29,7 @@
 
           <div class="tooltip">
             <button id="line" class="button">
-              <i class="fas fa-grip-lines"></i>
+              <i class="fas fa-slash"></i>
             </button>
             <span class="tooltiptext">Line</span>
           </div>
@@ -52,19 +41,6 @@
             max="100"
             class="pen-range"
           />
-
-          <div class="tooltip">
-            <button onclick="undoLast()" type="button" class="button">
-              <i class="fas fa-undo"></i>
-            </button>
-            <span class="tooltiptext">undo</span>
-          </div>
-          <div class="tooltip">
-            <button onclick="clearCanvas()" type="button" class="button">
-              <i class="fas fa-broom"></i>
-            </button>
-            <span class="tooltiptext">clear all</span>
-          </div>
 
           <div
             onclick="change_color(this)"
@@ -92,6 +68,31 @@
             type="color"
             class="color-picker"
           />
+
+          <div class="tooltip">
+            <input
+              class="button"
+              onclick="changecolor()"
+              type="color"
+              onchange="changecolor(this)"
+              id="background"
+            />
+            <!-- bucket icon -->
+            <span class="tooltiptext">Background Color</span>
+          </div>
+
+          <div class="tooltip">
+            <button onclick="undoLast()" type="button" class="button">
+              <i class="fas fa-undo"></i>
+            </button>
+            <span class="tooltiptext">Undo</span>
+          </div>
+          <div class="tooltip">
+            <button onclick="clearCanvas()" type="button" class="button">
+              <i class="fas fa-broom"></i>
+            </button>
+            <span class="tooltiptext">Clear All</span>
+          </div>
         </div>
       </div>
       <canvas id="canvas"></canvas>

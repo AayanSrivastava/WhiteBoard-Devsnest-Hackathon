@@ -64,10 +64,17 @@ body {
   margin: 5px 10px;
 }
 
+#background {
+  padding: 4px;
+  height: 30px;
+  width: 30px;
+}
+
 .color-picker {
   align-self: center;
-  margin: 5px 15px;
-  height: 40px;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
 }
 
 .tooltiptext {
@@ -77,9 +84,9 @@ body {
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 3px 0;
-
-  /* Position the tooltip */
+  padding: 3px;
+  top: 10px;
+  margin-left: -60px;
   position: absolute;
   z-index: 1;
 }
