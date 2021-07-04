@@ -1,53 +1,97 @@
-body{
-    margin:0px;
-    padding:30px;
-    overflow: hidden;
-    background:rgba(0, 0, 0, 0.705);
+body {
+  margin: 0px;
+  padding: 30px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.705);
 }
-canvas{
-    box-shadow:-3px 2px 9px 6px black;
-    cursor:pointer;
-    background-color: white;
-    border:10px solid transparent;
-    padding:30px;
-    border-image:url("border.jpg")60 stretch;
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 2px 10px;
+  background-color: white;
+  border-radius: 10px;
 }
-.tools{
-    display:flex;
-    justify-content:center;
-    flex-direction:row;
-    margin-top: 15px;
+
+.heading {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: cursive, "Times New Roman", Times, serif;
 }
-.tools .color-field{
-    height:40px;
-    width:40px;
-    min-height:40px;
-    min-width: 40px;
-    cursor:pointer;
-    display:inline-block;
-    box-sizing:border-box;
-    border-radius: 50%;
-    border:2px solid white;
-    align-self:center;
-    margin: 0 15px;
+
+.rest {
+  display: flex;
+  justify-content: flex-end;
 }
-.tools .button{
-    align-self:center;
-    width:100px;
-    height:40px;
-    border:2px solid white;
-    cursor:pointer;
-    color:white;
-    background-color: rgba(0, 0, 0, 0.671);
-    font-weight: bold;
-    margin:0 15px;
+
+.rest .color-field {
+  height: 30px;
+  width: 30px;
+  min-height: 30px;
+  min-width: 30px;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid white;
+  align-self: center;
+  margin: 0 5px;
 }
-.color-picker{
-    align-self:center;
-    margin:0 15px;
-    height:50px;
+
+.rest .button {
+  align-self: center;
+  padding: 10px;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.671);
+  font-weight: bold;
+  margin: 5px 10px;
 }
-.pen-range{
-    align-self:center;
-    margin 0 15px;
+
+.active {
+  align-self: center;
+  padding: 10px;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+  margin: 5px 10px;
+}
+
+.color-picker {
+  align-self: center;
+  margin: 5px 15px;
+  height: 40px;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 80px;
+  background-color: rgba(0, 0, 0, 0.705);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+canvas {
+  box-shadow: -3px 2px 9px 6px black;
+  cursor: crosshair;
+  background-color: white;
+  border: 10px solid transparent;
+  border-image: url("border.jpg") 60 stretch;
 }
