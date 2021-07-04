@@ -1,11 +1,11 @@
 const canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth - 70;
-canvas.height = 580;
+canvas.height = 480;
 
 let context = canvas.getContext("2d");
 let start_background_color = "white";
-context.fillStyle = start_background_color;
-context.fillRect(0, 0, canvas.width, canvas.height);
+// context.fillStyle = start_background_color;
+// context.fillRect(0, 0, canvas.width, canvas.height);
 
 let draw_color = "black";
 let draw_width = "2";
@@ -143,3 +143,8 @@ const undoLast = () => {
     context.putImageData(restoreArray[index], 0, 0);
   }
 };
+
+function changecolor(self){
+  document.getElementById('canvas').style.background = self.value;
+}
+
